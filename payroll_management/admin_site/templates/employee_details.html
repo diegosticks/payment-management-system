@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block head %} <title>Profile Details</title> {% endblock %}
+
+{% block body %}
+    <div class="container" align="justify">
+        <h4>Name: {{ object.first_name }} {{ object.last_name }}</h4>
+        <p>Department: {{ object.department_name }}</p>
+        <p>Email: {{ object.email }}</p>
+        <p>Phone no: {{ object.phone_no }}</p>
+        <p>Date of birth: {{ object.dob }}</p>
+        <p>City: {{object.city}}</p>
+        <p>State: {{object.state}}</p>
+        <p>Salary: {{object.basic_salary}} NGN</p>
+        <button class="btn btn-success" type="submit"><a href="update/">Update</a></button>
+        <button class="btn btn-danger" type="submit"><a href="delete/">Delete</a></button>
+    </div>
+{% endblock %}

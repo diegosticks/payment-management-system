@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block head %} <title>Employee Details</title> {% endblock %}
+
+{% block body %}
+    <div class="container" style="text-align:center">
+        <h1>Admin Section</h1>
+        <table>
+            <tr>
+                <td><a href="/create">Register employee</a></td>
+                <td><a href="{% url 'admin_s:create-employee' %}">Add Employee details</a></td>
+                <td><a href="/profile-list">Edit Employee details</a></td>
+            </tr>
+
+            <tr>
+                <td><a href="/">Reviews and Approvals</a></td>
+                <td><a href="/">Payslips</a></td>
+                <td><a href="/">Reports</a></td>
+            </tr>
+
+            <tr>
+                <td><a href="/">Dashboard</a></td>
+            </tr>
+        </table>
+
+    </div>
+{% endblock %}

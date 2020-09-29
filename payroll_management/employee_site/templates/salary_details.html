@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %} <title>Salary Details</title> {% endblock %}
+
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+        <h1>{{request.user|title}}'s Salary Details</h1>
+        Your salary details are as follow:
+        {% for instance in pay_roll %}
+
+        <p>Gross pay: {{ instance.gross_pay }}</p>
+        <h4>Deductions:</h4>
+        <p>Pension: {{ instance.pension }}</p>
+        <p>PAYE: {{ instance.paye }}</p>
+        <p>NSITF: {{ instance.nsitf }}</p>
+        <p>NHF: {{ instance.nhf }}</p>
+        <p>ITF: {{ instance.itf }}</p>
+        <h5>Total Deductions: {{ instance.deduct }}</h5>
+
+        <h4>Net Pay: {{ instance.netpay }}</h4>
+
+        {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block head %} <title>Profile</title> {% endblock %}
+
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+        <h1>{{request.user|title}}'s Profile</h1>
+        {% for instance in user_profile %}
+
+        <p>First Name: {{ instance.first_name }}</p>
+        <p>Last Name: {{ instance.last_name }}</p>
+        <p>Department: {{ instance.department_name }}</p>
+        <p>Email: {{ instance.email }}</p>
+        <p>Phone Number: {{ instance.phone_no }}</p>
+        <p>Date of Birth: {{ instance.dob }}</p>
+        <p>City: {{ instance.city }}</p>
+        <p>State of Origin: {{ instance.state }}</p>
+
+        {% endfor %}
+    </div>
+{% endblock %}
+

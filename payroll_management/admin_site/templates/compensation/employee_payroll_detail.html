@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block head %} <title>Payroll Details</title> {% endblock %}
+
+{% block body %}
+    <div class="container" align="justify">
+        <h4>Name: {{ object.employee_name }}</h4>
+        <p>Bank Name: {{ object.bank_name }}</p>
+        <p>Account Number: {{ object.account_no }}</p>
+        <p>Gross Pay: {{ object.gross_pay }}</p>
+        <button class="btn btn-success" type="submit"><a href="update/">Update</a></button>
+        <button class="btn btn-danger" type="submit"><a href="delete/">Delete</a></button>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head %} <title>Statutory Remittance</title> {% endblock %}
+
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+        <h1>Statutory Remittance</h1>
+        <p>The remittance is calculated automatically in the database one the gross pay is given.</p>
+        <p>Pension - 10%</p>
+        <p>PAYE - 5%</p>
+        <p>NSITF - 1%</p>
+        <p>ITF - 1%</p>
+        <p>NHF - 8%</p>
+    </div>
+{% endblock %}

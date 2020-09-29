@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block head %} <title>Employee Self Service</title> {% endblock %}
+
+{% block body %}
+    <div class="container" style="text-align:center">
+        <h1>Admin Section</h1>
+        <table>
+            <tr>
+                <td><a href="/profile">Profile</a></td>
+                <td><a href="/salary-details">Salary Details</a></td>
+                <td><a href="/">Pension Contributions</a></td>
+            </tr>
+
+            <tr>
+                <td><a href="/">Payslips</a></td>
+                <td><a href="/">Dashboard</a></td>
+            </tr>
+        </table>
+
+    </div>
+{% endblock %}

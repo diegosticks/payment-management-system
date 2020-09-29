@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% blockhead %}<title>Employee Payroll Delete</title>{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form action="." method="POST">
+            {% csrf_token %}
+            <h1>Do you want to delete the employee "{{ object.employee_name }} {{ object.bank_name }} bank details"?</h1>
+            <p> <input type="submit" value="Yes"> <a href="../">Cancel</a> </p>
+        </form>
+    </div>
+{% endblock %}

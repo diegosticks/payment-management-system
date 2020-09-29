@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block head %} <title>Employees Profiles</title> {% endblock %}
+
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+        <h1 style="text-align:center">Employee List</h1>
+        {% for instance in object_list %}
+            <p>{{ instance.id }} - <a href="{{ instance.get_absolute_url }}">
+                {{ instance.first_name }} {{ instance.last_name }} - {{ instance.department_name }}</a></p>
+        {% endfor %}
+    </div>
+{% endblock %}

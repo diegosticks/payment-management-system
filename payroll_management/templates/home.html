@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron" style="text-align: center;">
+            <h1 style="color: #F97B00;"><strong>Welcome to Kimberly Ryan</strong></h1>
+            <p style="color: #179D27;"><strong>Strategic Partnership You Can Trust</strong></p>
+        </div>
+        {% if not user.is_authenticated %}
+        <h3 style="text-align:center;">Please login</h3>
+        {% else %}
+        <h1 style="text-align:center;">Welcome {{ request.user }}</h1>
+        {% endif %}
+    </div>
+{% endblock %}

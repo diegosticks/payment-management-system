@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head %} <title>Employees Pay Profiles</title> {% endblock %}
+
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+        <h1 style="text-align:center">Employee Payroll List</h1>
+        {% for instance in object_list %}
+            <p>{{ instance.id }} - <a href="{{ instance.get_absolute_url }}">
+                {{ instance.employee_name }} - {{ instance.bank_name }}</a></p>
+        {% endfor %}
+    </div>
+{% endblock %}
+
